@@ -1,0 +1,10 @@
+class Dog {
+  
+  String name;
+  String breed;
+  String gender;
+  String age;
+  bool isFavorite;
+  
+  Dog(this.name, this.breed, this.gender, this.age, this.isFavorite)
+};
