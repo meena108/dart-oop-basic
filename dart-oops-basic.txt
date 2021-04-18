@@ -1,10 +1,107 @@
+void main () {
+  
+  //yo dog sano ma chai real dog pura Dog class
+  var dog = new Dog("Oscar", "German","Male",2, false);
+  //call method
+//   dog.bark();
+//   dog.eat(600);
+//   dog.eat(200);
+//   int age = dog.getAge();
+//   print(age);
+   bool favoriteDog = dog.isFavouritePet();
+//   print(favoriteDog);
+  
+  var cat = new Cat("Pinky", "Local","Female",2,true);
+  cat.meow();
+  cat.eat(350);
+  bool isFavoriteCat = cat.isFavouritePet();
+  
+ // bool hasFavoritePet = favoriteDog ||isFavoriteCat;
+   bool hasFavoritePet = dog.isFavouritePet() &&
+     cat.isFavouritePet();
+  print(hasFavoritePet);
+  
+}
+
+
 class Dog {
   
   String name;
   String breed;
   String gender;
-  String age;
+  int age;
   bool isFavorite;
   
-  Dog(this.name, this.breed, this.gender, this.age, this.isFavorite)
-};
+//   create is an constructor
+    Dog(this.name, this.breed, this.gender, this.age, this.isFavorite);
+//create method
+  
+  void bark()
+  {
+    print("Dog is barking");
+  }
+  
+  void eat(int foodWeight)
+  {
+    
+    if (foodWeight > 400) {
+      print("Dog is eating more");
+    } else {
+      
+      bark();
+    }
+     
+    
+  }
+  
+  int getAge() {
+    return age;
+  }
+  
+  bool isFavouritePet() {
+    return isFavorite;
+  }
+  
+  
+}
+
+class Cat {
+  
+  String name;
+  String breed;
+  String gender;
+  int age;
+  bool isFavorite;
+  
+//   create is an constructor
+    Cat(this.name, this.breed, this.gender, this.age, this.isFavorite);
+//create method
+  
+  void meow()
+  {
+    print("Cat is meowing");
+  }
+  
+  void eat(int foodWeight)
+  {
+    
+    if (foodWeight > 300) {
+      print("Cat is eating more");
+    } else {
+      
+      meow();
+    }
+     
+    
+  }
+  
+  int getAge() {
+    return age;
+  }
+  
+  bool isFavouritePet() {
+    return isFavorite;
+  }
+  
+  
+}
